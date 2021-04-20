@@ -2,8 +2,10 @@
 @import "modules/common";
 @import "modules/typo";
 @import "modules/header";
+@import "modules/footer";
+@import "modules/main";
 
 body {
-  background-color:  $colorTest;
-  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #44414c;
+  font-family: 'Montserrat', sans-serif;
 }

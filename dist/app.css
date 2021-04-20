@@ -1,4 +1,27 @@
+p {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.sectionHeader {
+  height: 800px;
+  background-image: url("../img/header_back.webp");
+}
+
+.titleFormat h2 {
+  font-size: 56px;
+  font-weight: 600;
+}
+.titleFormat h4 {
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.titleFormat .borderTitle {
+  border-bottom: solid 2px white;
+}
+
 body {
-  background-color: red;
-  font-family: "Source Sans Pro", sans-serif;
+  background-color: #44414c;
+  font-family: "Montserrat", sans-serif;
 }
