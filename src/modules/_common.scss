@@ -12,11 +12,25 @@
 .container__padding{
   padding: 0px 20px;
 }
+
+.containerLarge{
+  max-width: $containerLarge;
+}
+
+.containerMedium{
+  max-width: $containerMedium;
+}
 @mixin flexCenterParent($justify, $align, $direction){
   justify-content: $justify;
   align-items: $align;
   display: flex;
   flex-direction: $direction;
+  flex-grow: 0;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: center;
 }
 
 

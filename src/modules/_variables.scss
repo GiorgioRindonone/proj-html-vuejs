@@ -3,15 +3,25 @@
 
 $brandGrey: (#72697a);
 $brandAltColor: (#FCAD1C);
-$brandAltColorTrap: (rgba(249,36,91,0.5));
+$brandAltColorTrap: (rgba(252,173,28,0.5));
 $brandColor: (#191d26);
 $blackTrasp: (rgba(0,0,0,0.5));
 $whiteColor: (#ececec);
+$textColor: (#7a89ab);
+$textGrey: (#555c6e);
+$textDark: (#1d2028);
 
-
-
-
+$section-about-color: (#191c23);
+$section-why-color: (#191c23);
+$section-works-color: (#96c577);
+$section-trust-color: ();
+$section-blog-color: (#49629b);
+$section-form-color: (#ebeced);
 // containers
 
-$containerLarge: 800px;
-$containerMedium: 500px;
+$containerLarge: 900px;
+$containerMedium: 700px;
+
+
+//spacing
+$margin-section: 80px 0 30px 0;

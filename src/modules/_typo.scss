@@ -1,10 +1,22 @@
 p {
   font-size: 13px;
   font-weight: 600;
+  color: $textColor;
+  line-height: 30px;
 }
 
 h1 {
-  font-size: 80px;
+  font-size: 90px;
+}
+
+h2{
+  color: $whiteColor;
+}
+
+h4{
+  color:$textColor;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 $menuFontSize: 60px;
 $siteFontSize: 13px;
@@ -12,4 +24,15 @@ $siteFontSize: 13px;
 
 .bold-class {
   font-weight: bold;
+}
+
+h3{
+  font-size: 15px;
+}
+
+h4{
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+
 }

@@ -1,14 +1,234 @@
+main{
+  background-color: $section-about-color;
+}
+
 .template-title {
+  padding: $margin-section;
+  text-align: center;
   h2 {
-    font-size: 56px;
+    font-size: 40px;
     font-weight: 600;
   }
   h4 {
-    font-size: 18px;
-    font-weight: 400;
-    text-transform: uppercase;
+    // font-size: 14px;
+    // font-weight: 400;
+    // text-transform: uppercase;
+    margin: 20px 0;
   }
   &__border{
-    border-bottom: solid 2px white;
+    height: 20px;
+    margin: 0 auto;
+    border-top: 1px;
+    border-top-style: solid;
+    border-top-color: $whiteColor;
+    width: 80px;
   }
-} 
+}
+
+
+.about-container{
+  background-color: $section-about-color;
+  @include flexCenterParent(center, center, column);
+  width: 100%;
+    &__div{
+      width: 100%;
+    }
+    &__div--content{
+
+    @include flexCenterParent(center, flex-start, row);
+    &-div{
+      width: calc(100% / 2);
+    }
+
+    p {
+      margin: 0 20px;
+    }
+  }
+}
+
+.why-container{
+  background-color: $section-why-color;
+}
+
+.works-container{
+  position: relative;
+  width: 100%;
+  &__div{
+
+    width: 100%;
+  }
+  &__div--text{
+    background-color:$section-works-color;
+    h4,h2{
+      color: $whiteColor;
+
+    }
+  }
+  &__div--ul-work{
+    display: flex;
+    flex-wrap: wrap;
+    text-decoration: none;
+
+    li {
+      width: 50%;
+      list-style: none;
+      img {
+        width: 100%;
+      }
+      a{
+        text-decoration: none;
+        box-shadow: none;
+      }
+    }
+  }
+  // .div-divisory{
+  //   transform: rotate(0);
+  //   position: absolute;
+  //   top: -20px;
+  //   left:0px;
+  //   width: 0;
+  //   height: 0;
+  //   border-bottom: 20px solid red;
+  //   border-left: 100% solid transparent;
+  //   }
+
+  &__view-all {
+    @include flexCenterParent(center, center, row);
+    width: 100%;
+    height: 120px;
+    background-color: $brandAltColor;
+    h4{
+      color: $whiteColor;
+    }
+    &:hover{
+      background-color: $whiteColor;
+      h4{
+        color: $brandAltColor;
+      }
+    }
+  }
+  @include flexCenterParent(center, center, column);
+
+}
+
+.trust-container{
+
+}
+
+.blog-container{
+  position: relative;
+  &__div {
+    background-color:$section-blog-color;
+
+  }
+  &__div--text{
+    h2{
+      color: $whiteColor;
+    }
+    h4, p{
+      color: $whiteColor;
+    }
+  }
+  // .div-divisory{
+  //   position: absolute;
+  //   top: -21px;
+  //   transform: rotate(-2deg);
+  //   height: 100px;
+  //   width: 120%;
+  //   background-color: $section-blog-color;
+  // }
+  &__div-posts{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    &-full{
+      width: calc(100% / 3);
+    }
+    &-img{
+      position: relative;
+      img {
+        width: 100%;
+        &:hover~.blog-container__div-posts-img-hover{
+          display: flex;
+          transition: all .5s ease;
+        }
+
+      }
+    }
+    &-img-hover{
+      position: absolute;
+      background-color: $brandAltColorTrap;
+      top: 0;
+      width: 100%;
+      height: 99%;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding:20px;
+      h3{
+        color: $whiteColor;
+        font-size: 26px;
+      }
+      a{
+        text-decoration: none;
+      }
+
+    }
+    &-content{
+      height: 100%;
+      padding: 20px;
+      margin-bottom: 20px;
+      h3{
+        color: $brandAltColor;
+        font-size: 26px;
+      }
+
+    }
+  }
+
+}
+
+.form-container{
+  background-color:$section-form-color;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+    &__div--text{
+      h2{
+        color: $textDark;
+      }
+      h4, p{
+        color:$textGrey;
+      }
+
+    }
+    &__div--form{
+      margin: 0 auto;
+      width: 500px;
+    }
+    &__div--form-obj{
+      display: flex;
+      flex-direction: column;
+      align-items:  center;
+      input{
+        width: 100%;
+        padding: 20px;
+        margin: 10px 10px;
+        border: 0px;
+        height: 30px;
+      }
+      button{
+        margin: 20px 20px;
+        padding: 0 20px;
+        width: 100%;
+        height: 50px;
+        background-color: $brandAltColor;
+        color: $whiteColor;
+        border: 0px;
+        font-size: 20px;
+        letter-spacing: 2px;
+      }
+
+    }
+
+  }
