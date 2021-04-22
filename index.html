@@ -3,14 +3,10 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="dist/app.css">
-    <!-- <link rel="stylesheet" href="src/app.js"> -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- <link rel="stylesheet" href="dist/app.js"> -->
     <script src="https://kit.fontawesome.com/0ae8af7e4e.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
     <title>Freelancer</title>
   </head>
@@ -19,26 +15,36 @@
     <header>
 
       <!-- navMenu -->
-      <nav id="app-menu__header">
-        <i class="fas fa-bars" v-on:click="hideShow"></i>
-        <div id="menuHamb" class="">
-          <ul>
-            <!-- <todo-item></todo-item> -->
-            <!-- <li v-for="menuList in menuList"> {{ menuList.menuVoice }} </li> -->
-            <!-- <menu-voice v-for="menuList.menuVoice in menuList"  v-bind:menu-voice="menu-voice"  ></menu-voice> -->
-            <menu-item
-              v-for="item in menuVoices"
-              :menu="item"
-              :key="item.id"
-            ></menu-item>
-          </ul>
+      <nav id="app-menu__header" class="container-menu">
+        <div class="container-menu__top">
+          <img src="img/avada-freelance-logo.png" alt="">
+          <div class="menu__icons">
+            <i class="fas fa-plus"></i>
+            <i class="fas fa-bars" v-on:click="menuHamb = !menuHamb"></i>
+          </div>
+
         </div>
         <!-- vueMenu -->
-        <!-- <ul v-for="item in items" :item="item">
+        <div v-show="menuHamb" id="" class="container-menu__full">
+          <div class="menu-main__nav">
+            <ul>
+              <li v-for="menuVoices in menuVoices" v-on:click="menuHamb = !menuHamb">
+                <a :href="menuVoices.link"> {{menuVoices.text}} </a>
+              </li>
 
-        </ul> -->
+              <!-- <menu-item
+                v-for="item in menuVoices"
+                :menu="item"
+                :key="item.id"
+              ></menu-item> -->
+
+            </ul>
+
+          </div>
+        </div>
+
+
       </nav>
-
       <!-- header -->
       <!-- <section class="sectionHeader">
         <div class="containerHeaderText">
@@ -52,12 +58,10 @@
     <main>
 
       <!-- sectionAbout -->
-      <!-- about--Title -->
-      <!-- aboutContent -->
-
-      <!-- <section class="sectionAbout">
+      <section class="sectionAbout">
         <div class="containerAbout">
           <div class="about--title titleFormat">
+            <!-- about-Title -->
             <h2>About Me</h2>
             <h4>Ui & ux expert</h4>
             <div class="borderTitle">
@@ -65,18 +69,16 @@
             </div>
           </div>
 
+          <!-- aboutContent -->
 
-          <div class="aboutText">
-
-          </div>
         </div>
 
-      </section> -->
+      </section>
 
 
       <!-- sectionWhy -->
 
-      <!-- why--Title -->
+      <!-- why-Title -->
 
       <!-- whyContent -->
 
@@ -84,7 +86,7 @@
 
       <!-- sectionWorks -->
 
-      <!-- recent--Title -->
+      <!-- recent-Title -->
 
       <!-- containerWorks -->
 
@@ -104,20 +106,42 @@
 
       <!-- sectionForm -->
 
-      <!-- form--Title -->
+      <!-- form-Title -->
 
       <!-- form -->
     </main>
+
     <footer>
       <!-- logoFooter -->
+      <section id="app-footer">
+        <div class="container--footer">
+          <img :src="imgLogo.src" alt="">
+          <div class="footer-rights">
+            <ul>
+              <li v-for="rightsVoices in rightsVoices" >
+                {{rightsVoices.text}}
+              </li>
+            </ul>
+          </div>
+          <div class="footer-socials">
+            <ul>
+              <li v-for="socialIcons in socialIcons" >
+                <a :href="socialIcons.link">
+                 <i :class="socialIcons.icon"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       <!-- textFooter -->
 
       <!-- socialIconsFooter -->
     </footer>
-
     <script type="text/javascript" src="src/app.js">
 
     </script>
-    </body>
+
+  </body>
 </html>

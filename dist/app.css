@@ -1,11 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 1s ease;
+}
+
 p {
   font-size: 13px;
   font-weight: 600;
 }
 
-.sectionHeader {
-  height: 800px;
-  background-image: url("../img/header_back.webp");
+.container-menu__top {
+  height: 50px;
+  background-color: #191d26;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding: 0 20px;
+  color: #ececec;
+}
+.container-menu__top i {
+  margin: 0 10px;
+}
+.container-menu__top i:hover {
+  color: #f9245b;
+}
+.container-menu__top img {
+  height: 30px;
+}
+
+.container-menu__full {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 50px);
+  background-color: #191d26;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.container-menu__full li {
+  text-align: center;
+  list-style: none;
+  margin-bottom: 40px;
+}
+.container-menu__full a {
+  color: #ececec;
+  font-size: 60px;
+  text-decoration: none;
+}
+.container-menu__full a:hover {
+  color: #f9245b;
+}
+
+.container--footer {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  background-color: #191d26;
+}
+.container--footer img {
+  margin-bottom: 20px;
+}
+.container--footer .footer-rights {
+  text-align: center;
+  color: #72697a;
+}
+.container--footer .footer-rights ul {
+  margin: 10px;
+}
+.container--footer .footer-rights ul li {
+  display: inline-block;
+  font-size: 13px;
+  border-right: 2px solid;
+  border-color: #72697a;
+  margin: 5px;
+  padding-right: 10px;
+}
+.container--footer .footer-rights ul li:last-child {
+  border: none;
+}
+.container--footer .footer-socials ul {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.container--footer .footer-socials ul li {
+  display: inline-block;
+  background-color: #ececec;
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container--footer .footer-socials a {
+  text-decoration: none;
+  color: #191d26;
 }
 
 .titleFormat h2 {

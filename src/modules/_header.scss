@@ -1,5 +1,45 @@
-.sectionHeader {
-  height: 800px;
-  // background-color: grey;
-  background-image: url("../img/header_back.webp");
+// Menu
+
+.container-menu__top{
+  height: 50px;
+  background-color: $brandColor;
+  @include flexCenterParent(space-between, center, row);
+  padding: 0 20px;
+  color: $whiteColor;
+  i {
+    margin: 0 10px;
+    &:hover {
+      color: $brandAltColor;
+    }
+  }
+  img{
+    height: 30px;
+  }
 }
+
+.container-menu__full{
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 50px);
+  background-color: $brandColor;
+
+  @include flexCenterParent(center, center, row);
+  li {
+    text-align: center;
+    list-style: none;
+    margin-bottom: 40px;
+  }
+  a{
+    color: $whiteColor;
+    font-size: $menuFontSize;
+    text-decoration: none;
+
+    &:hover{
+      color: $brandAltColor;
+    }
+
+  }
+
+}
+
+// Jumbotron
