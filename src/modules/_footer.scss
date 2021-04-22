@@ -1,9 +1,9 @@
 .container--footer{
   @include flexCenterParent(center, center, column);
-  height: 300px;
+  padding: 30px 0;
   background-color: $brandColor;
   img{
-    margin-bottom: 20px;
+    margin: 30px 0;
   }
   .footer-rights{
     text-align: center;
@@ -38,11 +38,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
       }
 
     }
     a{text-decoration: none;
       color: $brandColor;
+      &:hover{
+        color: $brandAltColor;
+      }
       }
   }
 

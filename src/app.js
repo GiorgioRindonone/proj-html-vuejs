@@ -21,9 +21,9 @@ var app2 = new Vue(
   data: {
     rightsVoices: [
       {text: "© Copyright 2012 - 2021"},
-      {text: "Avada Theme by <strong>Theme Fusion</strong>"},
+      {text: "Avada Theme by ",bold: "Theme Fusion", text2: ""},
       {text: "All Rights Reserved"},
-      {text: "Powered by <strong>WordPress</strong>"},
+      {text: "Powered by ", bold: "WordPress"},
     ],
     socialIcons: [
       {name: "facebook", link:"https://vuejs.org/v2/guide/index.html", icon:"fab fa-facebook-f"},

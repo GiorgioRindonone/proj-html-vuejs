@@ -2,16 +2,44 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  -webkit-transition: all 1s ease;
-  -moz-transition:    all 1s ease;
-  -o-transition:      all 1s ease;
-  -ms-transition:     all 1s ease;
-  transition:         all 1s ease;
+  -webkit-transition: all .5s ease;
+  -moz-transition:    all .5s ease;
+  -o-transition:      all .5s ease;
+  -ms-transition:     all .5s ease;
+  transition:         all .5s ease;
 }
 
+.container__padding{
+  padding: 0px 20px;
+}
 @mixin flexCenterParent($justify, $align, $direction){
   justify-content: $justify;
   align-items: $align;
   display: flex;
   flex-direction: $direction;
 }
+
+
+// $breakpoints:
+// (phone: 640px,
+//   tablet: 768px,
+//   desktop: 1024px
+// ) !default;
+
+@mixin respond ($breakpoint) {
+
+
+        @if $breakpoint==tablet {
+
+
+        @media only screen and (max-width: 600px) {
+          @content;
+        }
+      }
+
+      @if $breakpoint==mobile {
+        @media only screen and (max-width: 480px) {
+          @content;
+        }
+      }
+    }

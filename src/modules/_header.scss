@@ -43,3 +43,27 @@
 }
 
 // Jumbotron
+
+.header-container {
+  // background-color: red;
+
+  height: 500px;
+  text-align: center;
+  @include flexCenterParent (center, center, column);
+  background-image: url("../img/header_back.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__typo{
+    h3 {
+      color: $whiteColor;
+    }
+    h1 {
+      color:$brandAltColor;
+    }
+    h4 {
+      color:$brandGrey;
+    }
+  }
+}

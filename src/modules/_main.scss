@@ -1,4 +1,4 @@
-.titleFormat {
+.template-title {
   h2 {
     font-size: 56px;
     font-weight: 600;
@@ -8,7 +8,7 @@
     font-weight: 400;
     text-transform: uppercase;
   }
-  .borderTitle{
+  &__border{
     border-bottom: solid 2px white;
   }
-}
+} 
